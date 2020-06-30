@@ -1,0 +1,70 @@
+/**index.wxss**/
+/* view {
+    color: var(--themeColor);
+} */
+// 轮播图
+.swiper_box{
+    swiper{
+        width: 750rpx;
+        height: 340rpx;
+        // height: calc(100vw * 340 / 750); 图片宽度也是750所以可以写成上面方式
+        image{
+            width: 100%;
+        }
+    }
+}
+
+// 导航
+.cate_box{
+    display: flex;
+    navigator{
+        flex: 1;
+        padding: 20px;
+        image{
+            width: 100%;
+        }
+    }
+}
+
+// 楼层
+.floor_box{
+
+    .floor_title{
+        padding: 10rpx 5px;
+        image{
+            width: 100%;
+        }
+    }
+
+    .floor_list{
+        padding: 0 5rpx;
+        &::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        navigator{
+            float: left;
+            width: 33.33%;
+
+            // 同级 后四个超链接
+            &:nth-last-child(-n+4){
+                // 原图的宽高 232 * 386
+                // 232 / 386 = 33.33vw / height
+                // 第一张图片高度 = 33.33vw * 386 / 232
+                // 后面图片高度是前面图片的一半
+                height: 33.33vw * 386 / 232 / 2;
+                border-left: 10rpx solid #fff;
+            }
+            // 2 3 两个超链接
+            &:nth-of-type(2),
+            &:nth-of-type(3){
+                border-bottom: 10rpx solid #fff;
+            }
+            image{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+<!--components/Tabs/Tabs.wxml-->
+<view class="tabs_box">
+    <view class="tabs_title">
+        <view 
+            class="title_item {{item.isActive ? 'active' : ''}}"
+            wx:for="{{tabs}}"
+            wx:key="id"
+            bindtap="handleItemTap"
+            data-index="{{index}}"
+        >
+            {{item.value}}
+        </view>
+    </view>
+    <view class="tabs_content">
+        <!-- 展示商品列表 标题下面的内容 -->
+        <slot></slot>
+    </view>
+</view>

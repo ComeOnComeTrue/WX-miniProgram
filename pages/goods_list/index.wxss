@@ -1,0 +1,34 @@
+/* pages/goods_list/index.wxss */
+.first_tab .goods_item {
+  display: flex;
+  border-bottom: 2rpx solid #ccc;
+  padding-bottom: 5rpx;
+}
+.first_tab .goods_item .goods_img_wrap {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.first_tab .goods_item .goods_img_wrap image {
+  width: 70%;
+}
+.first_tab .goods_item .goods_info_wrap {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.first_tab .goods_item .goods_info_wrap .goods_name {
+  overflow: hidden;
+  display: -webkit-box;
+  /* 设置盒子为伸缩盒 */
+  /* 设置伸缩盒内子元素的排列方式为vertical 垂直方向*/
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  /* 文本行数 */
+}
+.first_tab .goods_item .goods_info_wrap .goods_price {
+  color: var(--themeColor);
+  font-size: 32rpx;
+}
